@@ -34,7 +34,7 @@ header {
     width: 100%;
     background-color: var(--color-green-dark);
     position: relative;
-    top: 20px;
+    top: 15px;
 }
 
 .topbar{
@@ -91,6 +91,7 @@ header {
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .logo {
@@ -98,9 +99,15 @@ header {
     bottom: 10px;
 }
 
+.logo img{
+    width: 100px;
+}
+
 .menu {
     display: flex;
     gap: 2.5rem;
+    position: relative;
+    bottom: 0.4em;
 }
 
 .menu li a {
@@ -109,6 +116,7 @@ header {
     transition: 0.3s ease;
     font-size: 1.2rem;
     font-weight: 500;
+    letter-spacing: 2px;
 }
 
 /* .menu li a:focus {
@@ -151,6 +159,14 @@ section {
     top: 3em;
     width: 170px;
     height: auto;
+}
+
+.text-fit::before{
+    content: url("img/icon-union.png");
+    position: absolute;
+    background-size: cover;
+    bottom: 1em;
+    left: 3em;
 }
 
 
@@ -209,6 +225,21 @@ section {
     gap: 1em;
 }
 
+.banner{
+    position: relative;
+    top: 1em;
+}
+
+
+.banner::after {
+    content: url("img/icon-union.png");
+    transform: rotate(180deg);
+    display: inline-block;
+    position: absolute;
+    right: 7em;
+    display: inline-block;
+    background-size: cover;
+}
 
 /* .btn-contact a{
     display: inline-block;
