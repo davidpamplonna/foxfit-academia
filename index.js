@@ -1,21 +1,16 @@
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
+document.addEventListener("DOMContentLoaded", () => {
+    const menuMobile = document.querySelector(".menu-mobile i");
+    const navbar = document.querySelector(".navbar");
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+    menuMobile.addEventListener("click", () => {
+        // Alterna a classe "show" na navbar
+        navbar.classList.toggle("show");
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+        // Verifica e alterna entre os ícones
+        if (menuMobile.classList.contains("bx-menu-alt-right")) {
+            menuMobile.classList.replace("bx-menu-alt-right", "bx-menu-alt-left"); // Alterna para "X"
+        } else {
+            menuMobile.classList.replace("bx-menu-alt-left", "bx-menu-alt-right"); // Alterna para "Menu"
+        }
+    });
 });
